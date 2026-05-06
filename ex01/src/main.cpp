@@ -46,7 +46,7 @@ int main()
 
 	delete original;
 	delete copy;
-	std::cout << "--------------" << std::endl;
+	std::cout << "-------------------------------" << std::endl;
 	for (int i = 0; i < ARRAY_SIZE; i++)
 	{
 		delete array[i];
