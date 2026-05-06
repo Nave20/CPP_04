@@ -12,28 +12,28 @@
 
 #include "../inc/Animal.hpp"
 
-AAnimal::AAnimal() : _type("Blob")
+Animal::Animal() : _type("Blob")
 {
 	std::cout << "Animal::Animal()" << std::endl;
 }
 
-AAnimal::AAnimal(std::string const &type) : _type(type)
+Animal::Animal(std::string const &type) : _type(type)
 {
 	std::cout << "Animal::Animal()" << std::endl;
 }
 
-AAnimal::AAnimal(const AAnimal &other)
+Animal::Animal(const Animal &other)
 {
 	std::cout << "Animal::Animal(&other)" << std::endl;
 	this->_type = other._type;
 }
 
-AAnimal::~AAnimal()
+Animal::~Animal()
 {
 	std::cout << "Animal::~Animal()" << std::endl;
 }
 
-AAnimal& AAnimal::operator=(const AAnimal& other)
+Animal& Animal::operator=(const Animal& other)
 {
 	std::cout << "Animal::operator=(const Animal& other)" << std::endl;
 	if (this != &other)
@@ -41,9 +41,9 @@ AAnimal& AAnimal::operator=(const AAnimal& other)
 	return *this;
 }
 
-void AAnimal::makeSound() const
+void Animal::makeSound() const
 {
 	std::cout << "Animal.mp3" << std::endl;
 }
 
-std::string AAnimal::getType() const {return this->_type;}
+std::string Animal::getType() const {return this->_type;}

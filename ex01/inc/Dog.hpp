@@ -16,7 +16,7 @@
 # include "Animal.hpp"
 #include "Brain.hpp"
 
-class Dog : public AAnimal
+class Dog : public Animal
 {
 	public:
 		Dog();
@@ -25,6 +25,7 @@ class Dog : public AAnimal
 		Dog&	operator=(Dog const &src);
 		void	makeSound() const;
 
+		Brain	*getBrain() const;
 	private:
 		Brain	*_brain;
 };

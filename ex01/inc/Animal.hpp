@@ -15,18 +15,20 @@
 #include <string>
 #include <iostream>
 
-class AAnimal
+#include "Brain.hpp"
+
+class Animal
 {
 	public:
-		AAnimal();
-		AAnimal(std::string const &type);
-		AAnimal(const AAnimal &other);
-		AAnimal&	operator=(const AAnimal& other);
-		virtual ~AAnimal();
+		Animal();
+		Animal(std::string const &type);
+		Animal(const Animal &other);
+		Animal&	operator=(const Animal& other);
+		virtual ~Animal();
 
 		virtual void	makeSound() const;
 		std::string	getType() const;
-
+		virtual Brain* getBrain() const = 0;
 	protected:
 		std::string	_type;
 };

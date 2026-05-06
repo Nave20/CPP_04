@@ -15,14 +15,14 @@
 #include <string>
 #include <iostream>
 
-class AAnimal
+class Animal
 {
 	public:
-		AAnimal();
-		AAnimal(std::string const &type);
-		AAnimal(const AAnimal &other);
-		AAnimal&	operator=(const AAnimal& other);
-		virtual ~AAnimal();
+		Animal();
+		Animal(std::string const &type);
+		Animal(const Animal &other);
+		Animal&	operator=(const Animal& other);
+		virtual ~Animal();
 
 		virtual void	makeSound() const;
 		std::string	getType() const;
