@@ -50,3 +50,29 @@ Brain::~Brain()
 {
 	std::cout << "Brain::~Brain()" << std::endl;
 }
+
+void Brain::getIdea(int i) const
+{
+	if (i < 0 || i > 99)
+	{
+		std::cout << "Out of bound idea" << std::endl;
+		return ;
+	}
+	else
+	{
+		std::cout << "Brain::ideas = " << this->_ideas[i] << std::endl;
+	}
+}
+
+void Brain::setIdea(int i, std::string idea)
+{
+	if (i < 0 || i > 99)
+	{
+		std::cout << "Out of bound idea" << std::endl;
+		return ;
+	}
+	else
+	{
+		this->_ideas[i] = idea;
+	}
+}

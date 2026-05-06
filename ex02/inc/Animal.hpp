@@ -15,6 +15,8 @@
 #include <string>
 #include <iostream>
 
+#include "Brain.hpp"
+
 class AAnimal
 {
 	public:
@@ -26,7 +28,7 @@ class AAnimal
 
 		virtual void	makeSound() const = 0;
 		std::string	getType() const;
-
+		virtual Brain* getBrain() const = 0;
 	protected:
 		std::string	_type;
 };

@@ -33,6 +33,20 @@ int main()
 	{
 		array[i]->makeSound();
 	}
+	std::cout << "-------TESTING_DEEP_COPY-------" << std::endl;
+	Dog* original = new Dog();
+	original->getBrain()->setIdea(0, "Original idea");
+
+	Dog* copy = new Dog(*original);
+
+	copy->getBrain()->setIdea(0, "Copy idea");
+
+	original->getBrain()->getIdea(0);
+	copy->getBrain()->getIdea(0);
+
+	delete original;
+	delete copy;
+	std::cout << "-------------------------------" << std::endl;
 	for (int i = 0; i < ARRAY_SIZE; i++)
 	{
 		delete array[i];
