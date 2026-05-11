@@ -10,32 +10,32 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/Animal.hpp"
+#include "../inc/AAnimal.hpp"
 
 AAnimal::AAnimal() : _type("Blob")
 {
-	std::cout << "Animal::Animal()" << std::endl;
+	std::cout << "AAnimal::AAnimal()" << std::endl;
 }
 
 AAnimal::AAnimal(std::string const &type) : _type(type)
 {
-	std::cout << "Animal::Animal()" << std::endl;
+	std::cout << "AAnimal::AAnimal()" << std::endl;
 }
 
 AAnimal::AAnimal(const AAnimal &other)
 {
-	std::cout << "Animal::Animal(&other)" << std::endl;
+	std::cout << "AAnimal::AAnimal(&other)" << std::endl;
 	this->_type = other._type;
 }
 
 AAnimal::~AAnimal()
 {
-	std::cout << "Animal::~Animal()" << std::endl;
+	std::cout << "AAnimal::~AAnimal()" << std::endl;
 }
 
 AAnimal& AAnimal::operator=(const AAnimal& other)
 {
-	std::cout << "Animal::operator=(const Animal& other)" << std::endl;
+	std::cout << "AAnimal::operator=(const AAnimal& other)" << std::endl;
 	if (this != &other)
 		this->_type = other._type;
 	return *this;
@@ -43,7 +43,7 @@ AAnimal& AAnimal::operator=(const AAnimal& other)
 
 void AAnimal::makeSound() const
 {
-	std::cout << "Animal.mp3" << std::endl;
+	std::cout << "AAnimal.mp3" << std::endl;
 }
 
 std::string AAnimal::getType() const {return this->_type;}

@@ -5,8 +5,8 @@ OBJ_DIR = objs/
 SRC_DIR = .
 INC_DIR = include
 
-SRC_FILES = src/main.cpp src/Animal.cpp src/Cat.cpp src/Dog.cpp src/WrongAnimal.cpp src/WrongCat.cpp src/Brain.cpp
-INC_FILES = inc/Animal.hpp inc/Cat.hpp inc/Dog.hpp inc/WrongAnimal.hpp inc/WrongCat.hpp inc/Brain.hpp
+SRC_FILES = src/main.cpp src/AAnimal.cpp src/Cat.cpp src/Dog.cpp src/WrongAnimal.cpp src/WrongCat.cpp src/Brain.cpp
+INC_FILES = inc/AAnimal.hpp inc/Cat.hpp inc/Dog.hpp inc/WrongAnimal.hpp inc/WrongCat.hpp inc/Brain.hpp
 
 OBJS = $(addprefix $(OBJ_DIR),$(SRC_FILES:.cpp=.o))
 DEPS = $(OBJS:.o=.d)
